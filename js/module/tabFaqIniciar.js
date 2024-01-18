@@ -1,22 +1,29 @@
-export default function iniciarTabFaq(){
+export default class iniciarTabFaq{
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list)
+    this.activeClass = 'ativo'
+  }
 
-  const accordionList = document.querySelectorAll('[data-pergunta="accordion"] dt')
-  const activeClass = 'ativo'
-
-  if(accordionList.length){
-  accordionList[0].classList.add(activeClass)
-  accordionList[0].nextElementSibling.classList.add(activeClass)
-
-  
-  function activeAccordion(){
-    this.classList.toggle(activeClass)
-    this.nextElementSibling.classList.toggle(activeClass)
+  toggleAccordion(item){
+    item.classList.toggle(this.activeClass)
+    item.nextElementSibling.classList.toggle(this.activeClass)
   
   }
 
-  accordionList.forEach((item) =>{
-    item.addEventListener('click', activeAccordion)
-  })
-}
+  // Adicionando os eventos no accordion
+  addAccordionEvent() {
+    this.accordionList.forEach((item) =>{
+      item.addEventListener('click', () => this.toggleAccordion(item))
+    })
+  }
+  // Iniciando Função
+  init(){
+    if(this.accordionList.length) {
+      // Ativando primeiro item
+      this.toggleAccordion(this.accordionList[0])
+      this.addAccordionEvent()
+    }
+  }
+
 }
 
