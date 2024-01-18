@@ -2,15 +2,15 @@ export default class TabNavegacao {
   constructor(menu, descricao){
      this.tabMenu = document.querySelectorAll(menu)
      this.tabDescricao = document.querySelectorAll(descricao)
-     this.classeAtiva = 'ativo'
+     this.classAtiva = 'ativo'
   }
       //Ativa a tab de acordo com o index dela
       activeTab(index){
-        this.tabDescricao.forEach((section) =>{
-          section.classList.remove(this.classeAtiva)
+        this.tabDescricao.forEach((section) => {
+          section.classList.remove(this.classAtiva)
         })
         const direcao = this.tabDescricao[index].dataset.anime
-        this.tabDescricao[index].classList.add(this.classeAtiva, direcao)
+        this.tabDescricao[index].classList.add(this.classAtiva, direcao)
       }
        //Adiciona os eventos das tabs
       addTabNavEvent(){

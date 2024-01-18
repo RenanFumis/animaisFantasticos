@@ -5,16 +5,18 @@ scrollsuave.init();
 import animacaoScroll from './module/scroll-animacao.js'
 animacaoScroll()
 
-import TabFaq from './module/tabFaqIniciar.js'
-const iniciarAccordion = new TabFaq('[data-pergunta="accordion"] dt')
+import iniciarTabFaq from './module/tabFaqIniciar.js'
+const iniciarAccordion = new iniciarTabFaq('[data-pergunta="accordion"] dt')
 iniciarAccordion.init() 
 
 import TabNavegacao from './module/tabNavegacaoIniciar.js'
-const tabNavegacao = new TabNavegacao('[data-tab="menu"] li', '[data-tab="conteudo"]  section')
-tabNavegacao.init()
+const tabNav = new TabNavegacao('[data-tab="menu"] li', '[data-tab="conteudo"] section')
+tabNav.init()
 
-import iniciarModal from './module/modal.js'
-iniciarModal()
+import Modal from './module/modal.js'
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]')
+modal.init()
+
 
 import iniciarTooltip from './module/tooltip.js'
 iniciarTooltip()
