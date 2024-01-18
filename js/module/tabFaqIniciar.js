@@ -1,4 +1,4 @@
-export default class iniciarTabFaq{
+export default class TabFaq{
   constructor(list) {
     this.accordionList = document.querySelectorAll(list)
     this.activeClass = 'ativo'

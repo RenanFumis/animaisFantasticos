@@ -1,30 +1,32 @@
-export default function iniciarTabNavegacao() {
-
-  const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
-  const tabDescricao = document.querySelectorAll('[data-tab="conteudo"]  section')
-  const activeClass = 'ativo'
-  
-
-  if(tabMenu.length){
-      tabDescricao[0].classList.add(activeClass)
-
-    
-      function activeTab(index){
-        tabDescricao.forEach((item) =>{
-          item.classList.remove(activeClass)
+export default class TabNavegacao {
+  constructor(menu, descricao){
+     this.tabMenu = document.querySelectorAll(menu)
+     this.tabDescricao = document.querySelectorAll(descricao)
+     this.classeAtiva = 'ativo'
+  }
+      //Ativa a tab de acordo com o index dela
+      activeTab(index){
+        this.tabDescricao.forEach((section) =>{
+          section.classList.remove(this.classeAtiva)
         })
-        const direcao = tabDescricao[index].dataset.anime
-        tabDescricao[index].classList.add(activeClass, direcao)
+        const direcao = this.tabDescricao[index].dataset.anime
+        this.tabDescricao[index].classList.add(this.classeAtiva, direcao)
+      }
+       //Adiciona os eventos das tabs
+      addTabNavEvent(){
+        this.tabMenu.forEach((itemMenu, index) => {
+          itemMenu.addEventListener('click', () => this.activeTab(index))
+        })
       }
 
-      tabMenu.forEach((itemMenu, index) =>{
-        itemMenu.addEventListener('click', function(){
-          activeTab(index)
-        })
-      })
+      init(){
+        if(this.tabMenu.length && this.tabDescricao.length){
+          //ativar o primeiro item
+          this.activeTab(0)
+          this.addTabNavEvent()
+        }
+      }
   }
-
-}
 // Criamos uma nova função para poder usar os mesmos argumentos. Lembrando que temos que ativar a função para ele continuar funcionando.
 
 
