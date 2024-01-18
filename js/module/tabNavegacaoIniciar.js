@@ -25,6 +25,7 @@ export default class TabNavegacao {
           this.activeTab(0)
           this.addTabNavEvent()
         }
+        return this
       }
   }
 // Criamos uma nova função para poder usar os mesmos argumentos. Lembrando que temos que ativar a função para ele continuar funcionando.
