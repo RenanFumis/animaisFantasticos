@@ -6,7 +6,8 @@ import animacaoScroll from './module/scroll-animacao.js'
 animacaoScroll()
 
 import iniciarTabFaq from './module/tabFaqIniciar.js'
-iniciarTabFaq()
+const iniciarAccordion = new iniciarTabFaq('[data-pergunta="accordion"] dt')
+iniciarAccordion.init() 
 
 import iniciarTabNavegacao from './module/tabNavegacaoIniciar.js'
 iniciarTabNavegacao()
