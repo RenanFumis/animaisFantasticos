@@ -1,5 +1,6 @@
 import scrollSuave from './module/scroll-suave.js'
-scrollSuave()
+const scrollsuave = new scrollSuave('[data-menu="suave"] a[href^="#"]')
+scrollsuave.init();
 
 import animacaoScroll from './module/scroll-animacao.js'
 animacaoScroll()
