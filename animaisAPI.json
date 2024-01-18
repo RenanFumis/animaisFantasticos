@@ -1,0 +1,26 @@
+[
+  {
+    "especie": "Lobos",
+    "total": 250000
+  },
+  {
+    "especie": "Raposa",
+    "total": 17000000
+  },
+  {
+    "especie": "Esquilos",
+    "total": 3000000
+  },
+  {
+    "especie": "Ursos",
+    "total": 36000 
+  },
+  {
+    "especie": "Macaco Mandril",
+    "total": 3982
+  },
+  {
+    "especie": "Leão",
+    "total": 39000
+  }
+]
