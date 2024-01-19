@@ -21,7 +21,7 @@ modal.init()
 import Tooltip from './module/tooltip.js'
 const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
-console.log(tooltip)
+
 
 import dropDownMenuIniciar from './module/dropDownMenuIniciar.js'
 dropDownMenuIniciar()
