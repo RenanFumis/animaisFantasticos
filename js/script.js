@@ -24,8 +24,9 @@ const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
 
 
-import dropDownMenuIniciar from './module/dropDownMenuIniciar.js'
-dropDownMenuIniciar()
+import DropDownMenu from './module/dropDownMenu.js'
+const dropDownMenu = new DropDownMenu('[data-dropdown]')
+dropDownMenu.init()
 
 import menuMobileIniciar from './module/menuMobile.js'
 menuMobileIniciar()
