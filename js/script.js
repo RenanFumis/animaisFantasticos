@@ -18,8 +18,10 @@ const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-
 modal.init()
 
 
-import iniciarTooltip from './module/tooltip.js'
-iniciarTooltip()
+import Tooltip from './module/tooltip.js'
+const tooltip = new Tooltip('[data-tooltip]')
+tooltip.init()
+console.log(tooltip)
 
 import dropDownMenuIniciar from './module/dropDownMenuIniciar.js'
 dropDownMenuIniciar()
