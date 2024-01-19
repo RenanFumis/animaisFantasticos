@@ -32,10 +32,9 @@ import MenuMobile from './module/menuMobile.js'
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="lista"]')
 menuMobile.init()
 
-
-
-import funcionamentoHorario from './module/HorarioFuncionamento_dateObject.js'
-funcionamentoHorario()
+import FuncionamentoHorario from './module/HorarioFuncionamento_dateObject.js'
+const horarioFuncionamento = new FuncionamentoHorario('[data-semana]','aberto')
+horarioFuncionamento.init()
 
 import fetchAnimais from './module/fetchAnimais.js'
 fetchAnimais('../animaisAPI.json', '.numeros-grid')
