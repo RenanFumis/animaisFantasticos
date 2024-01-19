@@ -38,4 +38,4 @@ import fetchAnimais from './module/fetchAnimais.js'
 fetchAnimais('../animaisAPI.json', '.numeros-grid')
 
 import apiBitcoin from './module/fetchBitcoin.js'
-apiBitcoin()
+apiBitcoin('https://blockchain.info/ticker', '.btcPreco')
