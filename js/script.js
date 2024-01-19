@@ -28,8 +28,9 @@ import DropDownMenu from './module/dropDownMenu.js'
 const dropDownMenu = new DropDownMenu('[data-dropdown]')
 dropDownMenu.init()
 
-import menuMobileIniciar from './module/menuMobile.js'
-menuMobileIniciar()
+import MenuMobile from './module/menuMobile.js'
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="lista"]')
+menuMobile.init()
 
 
 
