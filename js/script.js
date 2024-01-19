@@ -34,8 +34,8 @@ menuMobileIniciar()
 import funcionamentoHorario from './module/HorarioFuncionamento_dateObject.js'
 funcionamentoHorario()
 
-import iniFetchAnimais from './module/fetchAnimais.js'
-iniFetchAnimais()
+import fetchAnimais from './module/fetchAnimais.js'
+fetchAnimais('../animaisAPI.json', '.numeros-grid')
 
 import apiBitcoin from './module/fetchBitcoin.js'
 apiBitcoin()
