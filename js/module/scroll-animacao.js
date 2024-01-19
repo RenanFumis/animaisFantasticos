@@ -1,28 +1,46 @@
  export default class AnimacaoScroll{
   constructor(sections){
     this.sections = document.querySelectorAll(sections)
-    this.windowMetade = window.innerHeight * .6
+    this.windowMetade = window.innerHeight * 0.6
 
-    this.animaScroll = this.animaScroll.bind(this)
+    this.checkDistancia = this.checkDistancia.bind(this)
   }
  
+  //Pega a distancia de cada seção em relação ao topo do site
+    pegarDistancia(){
+     this.distancia = [...this.sections].map((section) =>{
+        const offset = section.offsetTop
+        return {
+          element: section,
+          offset: Math.floor(offset - this.windowMetade), 
+        }
+      })
+    }
+
+    //Dá check na distancia de cada seção
+    checkDistancia(){
+      this.distancia.forEach((section) =>{
+        if(window.scrollY > section.offset){
+          section.element.classList.add('ativo')
+        } else if(section.element.classList.contains('ativo')){
+          section.element.classList.remove('ativo')
+        }
+      })
+    }
  
-        animaScroll(){
-        this.sections.forEach((section) =>{
-          const sectionTop = section.getBoundingClientRect().top - this.windowMetade
-          if(sectionTop < 0){
-            section.classList.add('ativo')
-          } else if(section.classList.contains('ativo')){
-            section.classList.remove('ativo')
-
-          }
-        })
-
-      }
       init(){
-        this.animaScroll()
-        window.addEventListener('scroll', this.animaScroll)
+        if(this.sections.length){
+          this.pegarDistancia()
+          this.checkDistancia()
+          window.addEventListener('scroll', this.checkDistancia)
       }
-      
-  }
+      return this
+      }
+
+      //Remove o evento de scroll se quiser
+      pararAnimacao(){
+        window.removeEventListener('scroll', this.checkDistancia)
+      }
+ }  
+
 
