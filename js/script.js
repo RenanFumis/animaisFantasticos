@@ -37,7 +37,7 @@ const horarioFuncionamento = new FuncionamentoHorario('[data-semana]','aberto')
 horarioFuncionamento.init()
 
 import fetchAnimais from './module/fetchAnimais.js'
-fetchAnimais('../animaisAPI.json', '.numeros-grid')
+fetchAnimais('./animaisAPI.json', '.numeros-grid')
 
 import apiBitcoin from './module/fetchBitcoin.js'
 apiBitcoin('https://blockchain.info/ticker', '.btcPreco')
