@@ -2,8 +2,9 @@ import scrollSuave from './module/scroll-suave.js'
 const scrollsuave = new scrollSuave('[data-menu="suave"] a[href^="#"]')
 scrollsuave.init();
 
-import animacaoScroll from './module/scroll-animacao.js'
-animacaoScroll()
+import AnimacaoScroll from './module/scroll-animacao.js'
+const animacaoScroll = new AnimacaoScroll('[data-anime="scroll"]')
+animacaoScroll.init()
 
 import iniciarTabFaq from './module/tabFaqIniciar.js'
 const iniciarAccordion = new iniciarTabFaq('[data-pergunta="accordion"] dt')
