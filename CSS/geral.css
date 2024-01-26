@@ -187,9 +187,11 @@ pre{
 .dados li {
   margin-bottom: 1rem;
   font-family: Helvetica, Arial;
+  text-decoration: none;
+  color: #222;
 }
 
-.dados li a{
+.dados a{
   text-decoration: none;
   color: #222;
 }
