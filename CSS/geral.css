@@ -186,8 +186,12 @@ pre{
 
 .dados li {
   margin-bottom: 1rem;
-  text-decoration: none;
   font-family: Helvetica, Arial;
+}
+
+#numero{
+  text-decoration: none;
+  color: #222;
 }
 
 .dados li::before{
