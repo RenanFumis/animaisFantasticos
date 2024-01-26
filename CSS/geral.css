@@ -201,6 +201,11 @@ pre{
   color: #FB5;
 }
 
+#clica{
+  text-decoration: none;
+  color: #222;
+}
+
 .dados li::before{
   content: '';
   display: inline-block;
