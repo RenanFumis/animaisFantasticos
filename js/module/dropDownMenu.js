@@ -27,7 +27,7 @@ import outsideClick from './clicandoForaMenuDropdown.js'
     addDropDownMenuEvento(){
       this.menusDropdown.forEach((menu) => {
         this.evento.forEach((eventUser)=>{
-          menu.addEventListener(eventUser, this.dropDownMenuAtivado, {passive: true})
+          menu.addEventListener(eventUser, this.dropDownMenuAtivado)
         })
       })
 

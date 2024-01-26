@@ -12,6 +12,10 @@ ul {
   list-style: none;
 }
 
+.dados li{
+  text-decoration: none;
+}
+
 body {
   background: #faf6ed;
   color: #222;
@@ -264,6 +268,10 @@ font-family: Helvetica, Arial;
   .copy {
     margin-bottom: 0px;
 
+  }
+  .faq-lista dd{
+    margin-left: 0px;
+    font-size: .95rem;
   }
 }
 
