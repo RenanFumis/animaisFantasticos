@@ -41,3 +41,9 @@ fetchAnimais('./animaisAPI.json', '.numeros-grid')
 
 import apiBitcoin from './module/fetchBitcoin.js'
 apiBitcoin('https://blockchain.info/ticker', '.btcPreco')
+
+import SlideNav from "./module/slide.js";
+
+const slide = new SlideNav('.slide', '.slide-wrapper')
+slide.init()
+slide.addControl('.custom-control')

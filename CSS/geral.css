@@ -310,12 +310,12 @@ font-family: Helvetica, Arial;
   display: none;
 }
 [data-pergunta="accordion"] dt::after{
-  content: '⮯';
+  content: '↲';
   margin-left: 10px;
 
 }
 [data-pergunta="accordion"] dt.ativo::after{
-  content: '⮭';
+  content: '↰';
   
 }
 
