@@ -189,9 +189,14 @@ pre{
   font-family: Helvetica, Arial;
 }
 
-.dados a #clicavel{
+.dados a{
   text-decoration: none;
   color: #222;
+}
+
+.dados a:hover{
+  text-decoration: none;
+  color: #FB5;
 }
 
 .dados li::before{
